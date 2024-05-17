@@ -35,4 +35,4 @@ jobs:
             file: ./Dockerfile
             platforms: linux/amd64
             push: true
-            tags: todorangeorge/udacity:latest
+            tags: todorangeorge/udacity/techtrends:latest
