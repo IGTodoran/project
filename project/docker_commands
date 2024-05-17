@@ -1,0 +1,30 @@
+## Docker commands used to build the application 
+docker build -t techtrends .
+
+## Docker commands used to run the application
+docker run -d -p 7111:3111 techtrends
+
+## Docker commands used to get the application logs
+docker logs 4ac28dc999dd08985f075bb41c5b6f091ec4ae437cf571725358a75843a3678d
+
+## Logs from the container running the TechTrends application
+[2024-05-17 02:57:06,520] INFO in app: Status successfully returned.
+172.17.0.1 - - [17/May/2024 02:57:06] "GET /healthz HTTP/1.1" 200 -
+172.17.0.1 - - [17/May/2024 02:57:10] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [17/May/2024 02:57:10] "GET /static/css/main.css HTTP/1.1" 304 -
+172.17.0.1 - - [17/May/2024 02:57:14] "GET /create HTTP/1.1" 200 -
+172.17.0.1 - - [17/May/2024 02:57:14] "GET /static/css/main.css HTTP/1.1" 304 -
+[2024-05-17 02:57:38,831] INFO in app: Created a new article having as title: Test title.
+172.17.0.1 - - [17/May/2024 02:57:38] "POST /create HTTP/1.1" 302 -
+172.17.0.1 - - [17/May/2024 02:57:39] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [17/May/2024 02:57:39] "GET /static/css/main.css HTTP/1.1" 304 -
+[2024-05-17 02:57:50,895] INFO in app: Metrics successfully returned.
+172.17.0.1 - - [17/May/2024 02:57:50] "GET /metrics HTTP/1.1" 200 -
+[2024-05-17 02:57:57,447] INFO in app: Article Test title retrieved!.
+172.17.0.1 - - [17/May/2024 02:57:57] "GET /7 HTTP/1.1" 200 -
+172.17.0.1 - - [17/May/2024 02:57:57] "GET /static/css/main.css HTTP/1.1" 304 -
+[2024-05-17 02:58:00,399] INFO in app: Article Kubernetes Certification retrieved!.
+172.17.0.1 - - [17/May/2024 02:58:00] "GET /6 HTTP/1.1" 200 -
+172.17.0.1 - - [17/May/2024 02:58:00] "GET /static/css/main.css HTTP/1.1" 304 -
+[2024-05-17 02:58:05,540] INFO in app: Metrics successfully returned.
+172.17.0.1 - - [17/May/2024 02:58:05] "GET /metrics HTTP/1.1" 200 -
