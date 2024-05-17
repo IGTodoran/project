@@ -2,7 +2,7 @@ FROM python:3.8
 LABEL maintainer="Ion-George Todoran"
 
 COPY . /app
-WORKDIR /app/techtrends
+WORKDIR /app/project/techtrends
 
 # change directory to techtrends; install the requirements; initialize Database
 RUN pip install -r requirements.txt
