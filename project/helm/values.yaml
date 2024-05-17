@@ -1,0 +1,28 @@
+# provide the name of the namespace
+namespace:
+  name: sandbox
+
+# define the image to execute with the Deployment
+image:
+  repository:
+     techtrends
+  tag: latest
+  pullPolicy: IfNotPresent
+
+# number of replicas for an application
+replicaCount: 1
+
+# ressources
+ressources:
+  limits:
+    cpu: 500m
+    memory: 128Mi
+  requests:
+    cpu: 250m
+    memory: 64Mi
+
+# container 
+container:
+  port: 3111
+  livenessProbe: /healthz
+  readinessProbe: /healthz

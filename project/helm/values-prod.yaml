@@ -1,0 +1,23 @@
+# provide the name of the namespace
+namespace:
+  name: prod
+
+# number of replicas for an application
+replicaCount: 5
+
+# define the image to execute with the Deployment
+image:
+  pullPolicy: Always
+
+# ressources
+ressources:
+  limits:
+    cpu: 500m
+    memory: 256Mi
+  requests:
+    cpu: 350m
+    memory: 128Mi
+
+# Service port 
+service:
+  port: 7111
